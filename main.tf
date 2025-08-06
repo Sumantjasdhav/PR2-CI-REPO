@@ -13,7 +13,14 @@ depends_on = [ var.resource_group_name ]
 
 }
 
-
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "resourcegrou"
+    storage_account_name = "sumantstrg"
+    container_name       = "sumantcontainer"
+    key                  = "terraform.tfstate"
+  }
+}
 
 
   
